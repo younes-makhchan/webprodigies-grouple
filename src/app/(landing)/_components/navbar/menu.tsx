@@ -20,9 +20,7 @@ const Menu = ({ orientation }: MenuProps) => {
             {GROUPLE_CONSTANTS.landingPageMenu.map((menuItem) => (
               <Link
                 href={menuItem.path}
-                {...(menuItem.section && {
-                  onClick: () => onSetSection(menuItem.path),
-                })}
+             
                 className={cn(
                   "rounded-xl flex gap-2 py-2 px-4 items-center",
                   section == menuItem.path
@@ -30,9 +28,12 @@ const Menu = ({ orientation }: MenuProps) => {
                     : "",
                 )}
                 key={menuItem.id}
+                {...(menuItem.section && {
+                  onClick: () => onSetSection(menuItem.path),
+                })}
               >
                 {section == menuItem.path && menuItem.icon}
-                {menuItem.label} {menuItem.id}
+                {menuItem.label}
               </Link>
             ))}
           </CardContent>
