@@ -32,7 +32,7 @@ const Menu = ({ orientation }: MenuProps) => {
                 key={menuItem.id}
               >
                 {section == menuItem.path && menuItem.icon}
-                {menuItem.label}
+                {menuItem.label} {menuItem.id}
               </Link>
             ))}
           </CardContent>

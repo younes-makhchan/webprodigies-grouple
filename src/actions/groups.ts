@@ -764,46 +764,45 @@ export const onGetDomainConfig = async (groupId: string) => {
   }
 }
 
-
 export const onAddCustomDomain = async (groupid: string, domain: string) => {
   try {
-      const addDomainHttpUrl = `https://api.vercel.com/v10/projects/${process.env.PROJECT_ID_VERCEL}/domains?teamId=${process.env.TEAM_ID_VERCEL}`
-      //we now insert domain into our vercel project
-      //we make an http request to vercel
-      const response = await axios.post(
-          addDomainHttpUrl,
-          {
-              name: domain,
-          },
-          {
-              headers: {
-                  Authorization: `Bearer ${process.env.AUTH_BEARER_TOKEN}`,
-                  "Content-Type": "application/json",
-              },
-          },
-      )
+    const addDomainHttpUrl = `https://api.vercel.com/v10/projects/${process.env.PROJECT_ID_VERCEL}/domains?teamId=${process.env.TEAM_ID_VERCEL}`
+    //we now insert domain into our vercel project
+    //we make an http request to vercel
+    const response = await axios.post(
+      addDomainHttpUrl,
+      {
+        name: domain,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.AUTH_BEARER_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      },
+    )
 
-      if (response) {
-          const newDomain = await client.group.update({
-              where: {
-                  id: groupid,
-              },
-              data: {
-                  domain,
-              },
-          })
+    if (response) {
+      const newDomain = await client.group.update({
+        where: {
+          id: groupid,
+        },
+        data: {
+          domain,
+        },
+      })
 
-          if (newDomain) {
-              return {
-                  status: 200,
-                  message: "Domain successfully added",
-              }
-          }
+      if (newDomain) {
+        return {
+          status: 200,
+          message: "Domain successfully added",
+        }
       }
+    }
 
-      return { status: 404, message: "Group not found" }
+    return { status: 404, message: "Group not found" }
   } catch (error) {
-      console.log(error)
-      return { status: 400, message: "Oops something went wrong" }
+    console.log(error)
+    return { status: 400, message: "Oops something went wrong" }
   }
 }

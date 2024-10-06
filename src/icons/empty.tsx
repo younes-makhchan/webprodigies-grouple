@@ -8,7 +8,7 @@ export const Empty = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g opacity="0.74">
-        <g clip-path="url(#clip0_8182_21406)">
+        <g clipPath="url(#clip0_8182_21406)">
           <rect
             width="288.161"
             height="231.765"
@@ -42,7 +42,7 @@ export const Empty = () => {
         />
       </g>
       <g filter="url(#filter0_b_8182_21406)">
-        <g clip-path="url(#clip1_8182_21406)">
+        <g clipPath="url(#clip1_8182_21406)">
           <rect
             x="48.6704"
             y="27.0391"
@@ -82,7 +82,7 @@ export const Empty = () => {
         />
       </g>
       <g filter="url(#filter1_b_8182_21406)">
-        <g clip-path="url(#clip2_8182_21406)">
+        <g clipPath="url(#clip2_8182_21406)">
           <rect
             x="105.839"
             y="61.0312"
