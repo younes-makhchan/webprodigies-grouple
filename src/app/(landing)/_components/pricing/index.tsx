@@ -42,23 +42,31 @@ export const PricingSection = (props: Props) => {
           <p>Features</p>
           <span className="flex gap-2 mt-3 items-center">
             <Check />
-            Feature number 1
+            Highly engaging
           </span>
           <span className="flex gap-2 items-center">
             <Check />
-            Feature number 1
+            Easy to setup
           </span>
           <span className="flex gap-2 items-center">
             <Check />
-            Feature number 1
+            Group chat and posts
           </span>
           <span className="flex gap-2 items-center">
             <Check />
-            Feature number 1
+            Students can create teams within Groups
           </span>
           <span className="flex gap-2 items-center">
             <Check />
-            Feature number 1
+            Gamification
+          </span>
+          <span className="flex gap-2 items-center">
+            <Check />
+            Host unlimited courses
+          </span>
+          <span className="flex gap-2 items-center">
+            <Check />
+            White-labeling options
           </span>
         </div>
       </Card>

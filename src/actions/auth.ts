@@ -12,12 +12,9 @@ export const onAuthenticatedUser = async () => {
       where: {
         clerkId: clerk.id,
       },
-      select: {
-        id: true,
-        firstname: true,
-        lastname: true,
-      },
+    
     })
+
     if (user)
       return {
         status: 200,
@@ -47,8 +44,8 @@ export const onSignUpUser = async (data: {
         ...data,
       },
     })
-
     if (createdUser) {
+
       return {
         status: 200,
         message: "User successfully created",
@@ -56,11 +53,13 @@ export const onSignUpUser = async (data: {
       }
     }
 
+
     return {
       status: 400,
       message: "User could not be created! Try again",
     }
   } catch (error) {
+
     return {
       status: 400,
       message: "Oops! something went wrong. Try again",

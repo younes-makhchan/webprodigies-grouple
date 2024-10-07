@@ -1,13 +1,16 @@
+import { onAuthenticatedUser } from "@/actions/auth"
 import GlassSheet from "@/components/global/glass-sheet"
 import { Button } from "@/components/ui/button"
 import { Logout } from "@/icons"
+import { MenuIcon } from "lucide-react"
 import Link from "next/link"
 import Menu from "./menu"
-import { MenuIcon } from "lucide-react"
 
 type Props = {}
 
-const LandingPageNavbar = (props: Props) => {
+const LandingPageNavbar = async (props: Props) => {
+  const user = await onAuthenticatedUser()
+
   return (
     <div className="w-full flex justify-between sticky top-0 items-center py-5 z-50">
       <p className="font-bold text-2xl">Grouple.</p>
