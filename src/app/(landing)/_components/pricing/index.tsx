@@ -2,7 +2,15 @@ import BackdropGradient from "@/components/global/backdrop-gradient"
 import GradientText from "@/components/global/gradient-text"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardTitle } from "@/components/ui/card"
-import { Check } from "@/icons"
+import {
+  Chat,
+  Courses,
+  Document,
+  Grid,
+  Heart,
+  MegaPhone,
+  WhiteLabel,
+} from "@/icons"
 import Link from "next/link"
 
 type Props = {}
@@ -41,31 +49,31 @@ export const PricingSection = (props: Props) => {
         <div className="flex flex-col gap-2 text-[#B4B0AE] mt-5">
           <p>Features</p>
           <span className="flex gap-2 mt-3 items-center">
-            <Check />
+            <MegaPhone />
             Highly engaging
           </span>
           <span className="flex gap-2 items-center">
-            <Check />
+            <Heart />
             Easy to setup
           </span>
           <span className="flex gap-2 items-center">
-            <Check />
+            <Chat />
             Group chat and posts
           </span>
           <span className="flex gap-2 items-center">
-            <Check />
+            <Grid />
             Students can create teams within Groups
           </span>
           <span className="flex gap-2 items-center">
-            <Check />
+            <Document />
             Gamification
           </span>
           <span className="flex gap-2 items-center">
-            <Check />
+            <Courses />
             Host unlimited courses
           </span>
           <span className="flex gap-2 items-center">
-            <Check />
+            <WhiteLabel />
             White-labeling options
           </span>
         </div>
