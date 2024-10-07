@@ -50,7 +50,7 @@ export const Navbar = async () => {
               className="bg-themeBlack rounded-2xl flex gap-2 border-themeGray hover:bg-themeGray"
             >
               <Logout />
-              Loginsssss
+              Login
             </Button>
           </Link>
         )}

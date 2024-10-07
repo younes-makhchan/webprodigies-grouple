@@ -162,7 +162,7 @@ const BlockTextEditor = ({
                       "text-red-500",
                   )}
                 >
-                  {characters || 0} / {max}
+                  {characters || 0} / {min}, Maximum is {max}
                 </p>
                 <ErrorMessage
                   errors={errors}
@@ -185,7 +185,7 @@ const BlockTextEditor = ({
                     "text-red-500",
                 )}
               >
-                {characters || 0} / {max}
+                {characters || 0} / {min}, Maximum is {max}
               </p>
               <ErrorMessage
                 errors={errors}

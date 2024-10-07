@@ -12,7 +12,6 @@ export async function GET(req: NextRequest) {
   try {
     const searchParams = req.nextUrl.searchParams
     const groupid = searchParams.get("groupid")
-
     const account = await stripe.accounts.create({
       type: "standard",
       country: "US",
@@ -20,7 +19,6 @@ export async function GET(req: NextRequest) {
     })
 
     if (account) {
-      console.log(account)
       const user = await onAuthenticatedUser()
       const integrateStripeAccount = await client.user.update({
         where: {
